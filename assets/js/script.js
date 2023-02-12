@@ -58,8 +58,17 @@ if (chooseSpecialCharacter === true) {
 
 // allows functions to randomize
 
-function randomize(max)
+function randomize(max){
+    return [Math.floor(Math.random() * max)]
+}
 
+// the character bank is looped through and is sent back to the user
+
+for (var i=0; i<characterAmount; i++){
+    newPassword = newPassword.concat(charaBank.charAt(randomize(charaBank.length-1)))
+}
+
+return newPassword
 
 
 
